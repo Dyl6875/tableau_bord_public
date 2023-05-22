@@ -5,9 +5,8 @@ radio.onReceivedString(function (receivedString) {
     basic.showString(receivedString)
 })
 radio.onReceivedValue(function (name, value) {
-    basic.showString(name)
-    basic.showString("" + (value))
+    basic.showString("" + (makerbit.getUltrasonicDistance(DistanceUnit.CM)))
+    basic.showNumber(value)
 })
-radio.setTransmitPower(7)
-radio.setGroup(191)
-radio.setFrequencyBand(83)
+radio.setGroup(107)
+makerbit.connectUltrasonicDistanceSensor(DigitalPin.P5, DigitalPin.P8)
