@@ -1,5 +1,6 @@
 radio.onReceivedNumber(function (receivedNumber) {
-    basic.showNumber(receivedNumber)
+    basic.showNumber(joystickbit.getRockerValue(joystickbit.rockerType.X))
+    basic.showNumber(joystickbit.getRockerValue(joystickbit.rockerType.Y))
 })
 radio.onReceivedString(function (receivedString) {
     basic.showString(receivedString)
